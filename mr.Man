@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learning Game</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h1>🎮 Learning Quiz Game</h1>
+
+  <h2 id="question">What is 2 + 2?</h2>
+
+  <button onclick="answer(3)">3</button>
+  <button onclick="answer(4)">4</button>
+  <button onclick="answer(5)">5</button>
+
+  <p id="result"></p>
+  <p>Score: <span id="score">0</span></p>
+
+  <script>
+    let score = 0;
+
+    function answer(choice) {
+      if (choice === 4) {
+        score++;
+        document.getElementById("result").innerText = "Correct! 🎉";
+      } else {
+        document.getElementById("result").innerText = "Wrong ❌";
+      }
+
+      document.getElementById("score").innerText = score;
+    }
+  </script>
+
+</body>
+</html>
